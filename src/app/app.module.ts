@@ -8,17 +8,23 @@ import { MyFirstcomponentComponent } from './my-firstcomponent/my-firstcomponent
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MyNavComponent } from './my-nav/my-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatGridListModule, MatCardModule, MatMenuModule, MatExpansionModule } from '@angular/material';
+import { MyDashboardComponent } from './my-dashboard/my-dashboard.component';
+import { InstructionsComponent } from './instructions/instructions.component';
 
 const routes: Routes = [
-  { path: 'home', component: MyFirstcomponentComponent }
+  { path: 'home', component: MyFirstcomponentComponent },
+  { path: 'dashboard', component: MyDashboardComponent },
+  { path: 'instructions', component: InstructionsComponent }
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
     MyFirstcomponentComponent,
-    MyNavComponent
+    MyNavComponent,
+    MyDashboardComponent,
+    InstructionsComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
@@ -30,7 +36,11 @@ const routes: Routes = [
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
